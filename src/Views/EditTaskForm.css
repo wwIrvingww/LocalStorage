@@ -1,39 +1,49 @@
+/* The button-55 class defines a styled button with a unique border radius,
+   box-shadow, and transition effect. It has a white background color,
+   Neucha sans-serif font, and a size of 1rem with 23px line-height. */
 .button-55 {
-    align-self: center;
-    background-color: #fff;
-    background-image: none;
-    background-position: 0 90%;
-    background-repeat: repeat no-repeat;
-    background-size: 4px 3px;
-    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-    border-style: solid;
-    border-width: 2px;
-    box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
-    box-sizing: border-box;
-    color: #41403e;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Neucha, sans-serif;
-    font-size: 1rem;
-    line-height: 23px;
-    outline: none;
-    padding: .75rem;
-    text-decoration: none;
-    transition: all 235ms ease-in-out;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-  
-  .button-55:hover {
-    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
-    transform: translate3d(0, 2px, 0);
-  }
-  
-  .button-55:focus {
-    box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-  }
+  /* Custom border radius for the button */
+  --border-radius: 15px 225px 255px 15px;
+
+  /* Base box-shadow for the button */
+  --box-shadow-base: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+
+  /* Hover box-shadow for the button */
+  --box-shadow-hover: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+
+  /* Focus box-shadow for the button */
+  --box-shadow-focus: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+
+  /* Transition effect for the button */
+  --transition: all 235ms ease-in-out;
+
+  /* Center the button */
+  align-self: center;
+
+  /* Set the background color to white */
+  background-color: #fff;
+
+  /* Remove background image */
+  background-image: none;
+
+  /* Set the background position */
+  background-position: 0 90%;
+
+  /* Repeat the background image */
+  background-repeat: repeat no-repeat;
+
+  /* Set the background size */
+  background-size: 4px 3px;
+
+  /* Apply the custom border radius */
+  border-radius: var(--border-radius);
+
+  /* Set the border style and width */
+  border-style: solid;
+  border-width: 2px;
+
+  /* Apply the base box-shadow */
+  box-shadow: var(--box-shadow-base);
+
+  /* Include padding and border in the box sizing */
+
