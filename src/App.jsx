@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Router from './Components/Router';
-import TaskComponent from './Views/TaskComponent'; // Importa TaskComponent
+import TaskComponent from './Views/TaskComponent';
+import AddTaskForm from './Views/AddTaskrForm';// Importa AddTaskForm
 
 function App() {
   const [rutaActual, setRutaActual] = useState("app");
@@ -24,6 +25,7 @@ function App() {
       <div className='paginas'>
         <Router ruta={rutaActual} setRoute={setRutaActual}>
           <TaskComponent />
+          <AddTaskForm /> {/* Agrega el componente AddTaskForm */}
         </Router>
       </div>
     </div>

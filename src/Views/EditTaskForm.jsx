@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
+import '../Views/EditTaskForm.css';
 
 const EditTaskForm = ({ task, onSave }) => {
   const [editedTitle, setEditedTitle] = useState(task.title);
@@ -11,7 +12,7 @@ const EditTaskForm = ({ task, onSave }) => {
   };
 
   return (
-    <div className='form-group'>
+    <div className='container'>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -22,7 +23,7 @@ const EditTaskForm = ({ task, onSave }) => {
           value={editedDescription}
           onChange={(e) => setEditedDescription(e.target.value)}
         ></textarea>
-        <button type="submit">Guardar Cambios</button>
+        <button className="button-55 "type="submit">Guardar Cambios</button>
       </form>
     </div>
   );
@@ -34,3 +35,6 @@ EditTaskForm.propTypes = {
 };
 
 export default EditTaskForm;
+
+
+

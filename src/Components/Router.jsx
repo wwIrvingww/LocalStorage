@@ -20,8 +20,8 @@ function Router({ ruta, setRoute }) {
 
 
         // Almacenar un dato en nuestro storage por medio de setItem (propiedad, valor)
-        localStorage.setItem("nombre", "Ludwing");
-        localStorage.setItem("apellido", "Cano");
+        localStorage.setItem("nombre", "Irving");
+        localStorage.setItem("apellido", "Acosta");
 
         // Obtener un dato de nuestro storage por medio de getItem
        console.log(localStorage.getItem("nombre")); 
