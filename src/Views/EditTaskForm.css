@@ -1,22 +1,22 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Alinea los elementos horizontalmente */
+  align-items: center; 
 }
 
 .input-container {
-  margin-bottom: 5px; /* Reducir el espacio entre los elementos */
+  margin-bottom: 5px; 
   width: 100%;
 }
 
 .input-container input,
 .input-container textarea {
   width: 100%;
-  padding: 8px; /* Agregar un poco de relleno para una apariencia más agradable */
-  border: 1px solid #ccc; /* Añadir un borde ligero */
-  border-radius: 5px; /* Redondear las esquinas */
+  padding: 8px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
   box-sizing: border-box;
-  font-size: 16px; /* Ajustar el tamaño de la fuente */
+  font-size: 16px;
 }
 
 

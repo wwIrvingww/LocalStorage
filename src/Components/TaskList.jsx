@@ -4,7 +4,8 @@ import TaskItem from './task';
 
 const TaskList = ({ tasks, onDeleteTask, onEditTask }) => {
     return (
-      <div className='cotainer'>
+      <div className='container'>
+        WELCOME
         {tasks.map(task => (
           <TaskItem key={task.id} task={task} onDelete={() => onDeleteTask(task.id)} onEdit={() => onEditTask(task.id)} />
         ))}

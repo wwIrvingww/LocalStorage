@@ -23,9 +23,9 @@ function App() {
         </nav>
       </div>
       <div className='paginas'>
-        <Router ruta={rutaActual} setRoute={setRutaActual}>
+        <Router ruta={rutaActual} setRoute={setRutaActual}>      
           <TaskComponent />
-          <AddTaskForm /> {/* Agrega el componente AddTaskForm */}
+          <AddTaskForm /> 
         </Router>
       </div>
     </div>
