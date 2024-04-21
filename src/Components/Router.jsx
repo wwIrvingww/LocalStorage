@@ -4,10 +4,12 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
 function TaskRouter({ ruta, setRoute }) {
+  // Function to navigate to a new route
   const navigate = (newRoute) => {
     setRoute(newRoute);
   };
 
+  // If the current route is not '/list' or '/add', display a welcome message
   if (ruta !== '/list' && ruta !== '/add') {
     return (
       <div>
@@ -18,6 +20,7 @@ function TaskRouter({ ruta, setRoute }) {
 
   let routeComponent;
 
+  // Switch statement to render the appropriate component based on the current route
   switch (ruta) {
     case '/list':
       routeComponent = (
@@ -47,12 +50,15 @@ function TaskRouter({ ruta, setRoute }) {
       break;
   }
 
+  // Render the selected component
   return routeComponent;
 }
 
+// Type checking for props
 TaskRouter.propTypes = {
   ruta: PropTypes.string.isRequired,
   setRoute: PropTypes.func.isRequired,
 };
 
 export default TaskRouter;
+
