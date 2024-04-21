@@ -1,64 +1,46 @@
 import TaskComponent from '../Views/TaskComponent';
-import AddTaskForm from '../Views/AddTaskForm';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import AddTaskForm from '../Views/AddTaskForm';
 
-function TaskRouter({ ruta, setRoute }) {
-  // Function to navigate to a new route
-  const navigate = (newRoute) => {
-    setRoute(newRoute);
-  };
+function Router({ ruta, setRoute }) {
+    const [tasks, setTasks] = useState([
+        { id: 1, title: 'Hacer la compra', description: 'Comprar alimentos para la semana' },
+        { id: 2, title: 'Lavar el coche', description: 'Limpiar el coche por fuera y por dentro' },
+    ]);
 
-  // If the current route is not '/list' or '/add', display a welcome message
-  if (ruta !== '/list' && ruta !== '/add') {
+    const navigate = (newRoute) => {
+        setRoute(newRoute);
+    };
+
+    useEffect(() => {
+        // Lógica para manipular el localStorage
+    }, []);
+
+    const deleteTask = (taskId) => {
+        setTasks(tasks.filter(task => task.id !== taskId));
+    };
+
+    const addTask = (newTask) => {
+        setTasks([...tasks, newTask]);
+        navigate("/list");
+    };
+
+    const saveEditedTask = (editedTask) => {
+        setTasks(tasks.map(task => (task.id === editedTask.id ? editedTask : task)));
+    };
+
     return (
-      <div>
-        <h1>Bienvenidos</h1>
-      </div>
+        <div>
+            {ruta === "/list" && <TaskComponent tasks={tasks} onDeleteTask={deleteTask} onSaveEditedTask={saveEditedTask} />}
+            {ruta === "/add" && <AddTaskForm onAddTask={addTask} />}
+        </div>
     );
-  }
-
-  let routeComponent;
-
-  // Switch statement to render the appropriate component based on the current route
-  switch (ruta) {
-    case '/list':
-      routeComponent = (
-        <TaskComponent
-          key="task-list"
-          task={{
-            title: '',
-            description: '',
-          }}
-          navigate={navigate}
-        />
-      );
-      break;
-    case '/add':
-      routeComponent = (
-        <AddTaskForm
-          key="add-task"
-          onAddTask={(task) => {
-            // handle adding a task here
-            navigate('/list');
-          }}
-          navigate={navigate}
-        />
-      );
-      break;
-    default:
-      break;
-  }
-
-  // Render the selected component
-  return routeComponent;
 }
 
-// Type checking for props
-TaskRouter.propTypes = {
-  ruta: PropTypes.string.isRequired,
-  setRoute: PropTypes.func.isRequired,
+Router.propTypes = {
+    ruta: PropTypes.string.isRequired,
+    setRoute: PropTypes.func.isRequired,
 };
 
-export default TaskRouter;
-
+export default Router;

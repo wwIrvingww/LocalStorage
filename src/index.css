@@ -1,35 +1,68 @@
-/* Base styles */
 :root {
-  /* Use a modern sans-serif font stack */
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5; /* Set the line height to 1.5 times the font size */
-  font-weight: 400; /* Set the font weight to normal */
+  line-height: 1.5;
+  font-weight: 400;
 
-  /* Set up color scheme and initial color and background colors */
-  color-scheme: light dark; /* Enable color schemes for light and dark modes */
-  color: rgba(255, 255, 255, 0.87); /* Set the initial text color to a semi-transparent white */
-  background-color: #242424; /* Set the initial background color to a dark gray */
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 
-  /* Improve font rendering */
-  font-synthesis: none; /* Disable font synthesis */
-  text-rendering: optimizeLegibility; /* Optimize text rendering for legibility */
-  -webkit-font-smoothing: antialiased; /* Use antialiased font smoothing in Webkit browsers */
-  -moz-osx-font-smoothing: grayscale; /* Use grayscale font smoothing in Mozilla browsers on OS X */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Link styles */
 a {
-  font-weight: 500; /* Set the font weight to medium */
-  color: #646cff; /* Set the link color to a blue-purple color */
-  text-decoration: inherit; /* Inherit the text decoration from the parent element */
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
 }
-
 a:hover {
-  color: #535bf2; /* Set the link color on hover to a slightly lighter blue-purple color */
+  color: #535bf2;
 }
 
-/* Body styles */
 body {
-  margin: 0; /* Remove the default margin */
-  display: flex; /* Set the display mode to flexbox */
-  place-
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

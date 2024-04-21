@@ -1,69 +1,45 @@
-/* General styles */
-body {
-  font-family: Arial, sans-serif;
-}
-
-.centered {
-  align-items: center;
-}
-
-.margin-top-20 {
-  margin-top: 20px;
-}
-
-.margin-bottom-10 {
-  margin-bottom: 10px;
-}
-
-/* Form styles */
 .form-group {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-top: 20px;
 }
 
-.form {
+.form-group form {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
 }
 
-.form input,
-.form textarea,
-.form button {
-  margin-bottom: 10px;
+.form-group form input,
+.form-group form textarea,
+.form-group form button {
+  margin-bottom: 10px; 
+}
+.input{
+    background-color: aliceblue;
+    color: black;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none
 }
 
-/* Input styles */
-.input {
-  background-color: aliceblue;
-  color: black;
-  width: 200px;
-  height: 50px;
-  border-radius: 10px;
-  border: none;
+.textarea
+{
+    width: 300px;
+    border: none;
+    height: 50px;
+    background-color: aliceblue;
+    color: black;
+    height: 50px;
 }
 
-/* Textarea styles */
-.textarea {
-  width: 300px;
-  border: none;
-  height: 50px;
-  background-color: aliceblue;
-  color: black;
-  resize: none;
-}
-
-/* Button styles */
-.button {
+.button{
   width: 150px;
-  height: 40px;
+  height: 40px; 
   background: dodgerblue;
   border-radius: 5px;
-  transition: all 0.3s cubic-bezier(0.67, 0.17, 0.40, 0.83);
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #007bff;
+  transition: all .3s cubic-bezier(0.67, 0.17, 0.40, 0.83);
 }
